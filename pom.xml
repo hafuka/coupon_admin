@@ -93,12 +93,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-            <version>2.3.13</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-jsp_2.0_spec</artifactId>
             <version>1.0</version>
@@ -319,11 +313,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.29</version>
 		</dependency>
-		<!-- coupon -->
 		<dependency>
-			<groupId>coupon</groupId>
-			<artifactId>coupon</artifactId>
-			<version>0.0.1</version>
-		</dependency>
+        	<groupId>coupon</groupId>
+        	<artifactId>coupon</artifactId>
+        	<version>1.0-SNAPSHOP</version>
+        	<scope>system</scope>
+        	<systemPath>${basedir}/lib/coupon-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
     </dependencies>
 </project>

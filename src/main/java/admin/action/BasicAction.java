@@ -10,10 +10,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.struts.util.LabelValueBean;
 import org.seasar.struts.annotation.Execute;
 
-import admin.utils.ImageFileUtils;
 import coupon.entity.MShop;
 import coupon.service.PullDownService;
 import coupon.service.ShopService;
+import coupon.util.Images;
 
 public class BasicAction extends BaseAction {
 
@@ -58,7 +58,7 @@ public class BasicAction extends BaseAction {
 		
 		String fileName = loginAdminDto.shopId + ".jpg";
 		
-		ImageFileUtils.writeImage("/var/www/images/coupon/"+fileName, Base64.decodeBase64(img));
+		Images.writeImage("/var/www/images/coupon/"+fileName, Base64.decodeBase64(img));
 		
 		MShop mShop = new MShop();
 		mShop.shopId = loginAdminDto.shopId;

@@ -6,6 +6,9 @@
 		<initMethod name="addRootPackageName">
 			<arg>"admin"</arg>
 		</initMethod>
+		<initMethod name="addRootPackageName">
+			<arg>"coupon"</arg>
+		</initMethod>
 	</component>
 	<component class="org.seasar.framework.convention.impl.PersistenceConventionImpl"/>
 </components>
