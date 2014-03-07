@@ -12,7 +12,7 @@
 		Javaのエンコーディング名]
 		例："jdbc:mysql://localhost:3306/test?useUnicode=true" +
 		"&amp;characterEncoding=Windows-31J"
-		
+
 	- MySQL5.0以降で，エンコーディングがeucjpmsの列を扱う場合には，
 		URL指定の後に，以下の接続パラメータを追加で指定してください．
 		characterEncoding=UTF-8またはWindows-31J
@@ -26,7 +26,7 @@
 		行なわれるようになります．この結果，文字化けを防げます．
 		なおJIS X 0212(補助漢字)を使用する場合は，Windows-31Jではなく
 		UTF-8を指定する必要があります．
-		
+
 	- 上記以外の場合は，my.cnfでdefault-character-setの設定を適切に
 		(cp932やutf8など．デフォルトのlatin1は不可)行なっていれば，
 		文字化けは防げます．-->
@@ -39,7 +39,7 @@
 			"jdbc:mysql://localhost:3306/coupon"
 		</property>
 		<property name="user">"root"</property>
-		<property name="password">"hafuka3104"</property>
+		<property name="password">"admin"</property>
 	</component>
 	<component name="connectionPool"
 		class="org.seasar.extension.dbcp.impl.ConnectionPoolImpl">
