@@ -47,6 +47,8 @@ public class BasicAction extends BaseAction {
 	public int dispAreaDetailId;
 	public int dispBusinessId;
 
+	public String dispImagePath;
+
 	@Execute(validator = false)
 	public String index() {
 		this.shop = shopService.getMShop(loginAdminDto.shopId);
@@ -54,6 +56,9 @@ public class BasicAction extends BaseAction {
 		this.businessList = pullDownService.getBusinessList();
 
 		if (shop != null) {
+
+			dispImagePath = Images.getImageFilePath(shop.shopId);
+
 			if (shop.areaId != null) {
 				this.areaDetailList = pullDownService.getAreaDetailList(shop.areaId);
 				dispAreaId = shop.areaId;

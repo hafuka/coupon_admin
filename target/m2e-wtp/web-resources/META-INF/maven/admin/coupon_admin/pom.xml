@@ -72,6 +72,24 @@
 			<name>The Seasar Foundation Maven2 Repository</name>
 			<url>http://maven.seasar.org/maven2</url>
 		</repository>
+		<repository>
+	        <id>org.seasar.maven</id>
+	        <name>Seasar Framework</name>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	        <url>http://maven.seasar.org/maven2/</url>
+	    </repository>
+	    <repository>
+	        <id>repo1.maven.org</id>
+	        <name>repo1.maven.org</name>
+	        <url>http://repo1.maven.org/maven2/</url>
+	    </repository>
+	    <repository>
+	        <id>repo2.maven.org</id>
+	        <name>repo2.maven.org</name>
+	        <url>http://repo2.maven.org/maven2/</url>
+	    </repository>
 	</repositories>
 	<dependencies>
         <dependency>
@@ -320,5 +338,22 @@
         	<scope>system</scope>
         	<systemPath>${basedir}/lib/coupon-1.0-SNAPSHOT.jar</systemPath>
         </dependency>
+        <dependency>
+	        <groupId>org.seasar.mai</groupId>
+	        <artifactId>s2mai-tiger</artifactId>
+	        <version>0.9.7</version>
+	        <exclusions>
+	            <exclusion>
+	                <groupId>ozacc-mail</groupId>
+	                <artifactId>ozacc-mail</artifactId>
+	            </exclusion>
+	        </exclusions>
+	    </dependency>
+	    <dependency>
+	        <groupId>jp.sourceforge.spring-ext</groupId>
+	        <artifactId>ozacc-mail</artifactId>
+	        <version>1.2.3</version>
+	        <scope>compile</scope>
+	    </dependency>
     </dependencies>
 </project>

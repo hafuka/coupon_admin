@@ -4,7 +4,7 @@
         <#-- 共通headのインクルード -->
         <#include "/common/htmlHead.ftl">
     </head>
-    
+
     <body class="outline topContents">
 
         <section>
@@ -22,13 +22,12 @@
                 <div class="textCenter mb10">
                     <a href="${urlPath}/login" class="btn btnNormal jsTouchActive autoMargin">ログイン</a>
                 </div>
-
                 <div class="textCenter mb10">
-                    <a href="${urlPath}/register" class="btn btnPrimary jsTouchActive autoMargin">かんたん新規会員登録>></a>
+                    <a href="${urlPath}/register" class="btn btnPrimary jsTouchActive autoMargin">新規店舗登録</a>
                 </div>
             </div>
         </nav>
-        
+
         <#-- 共通JavaScriptのインクルード -->
         <#include "/common/htmlFoot.ftl">
 
