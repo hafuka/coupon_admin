@@ -30,6 +30,12 @@
                 <div class="m10 fs22">
                     <a href="${urlPath!?html}/" class="link2">３.パスワード変更</a>
                 </div>
+                <div class="m10 fs22">
+                    <a href="${urlPath!?html}/howto" class="link2">４.クーポンをもっているお客さんへのご対応について</a>
+                </div>
+                <div class="m10 fs22">
+                    <a href="${urlPath!?html}/howto#ac_storeDetail" class="link2">５.店舗詳細ページイメージ図</a>
+                </div>
             </div>
             
             <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
