@@ -5,28 +5,43 @@
         <#include "/common/htmlHead.ftl">
     </head>
 
-    <body class="outline topContents">
+    <body class="outline">
 
         <section>
-            <div class="mt10 headMarqueeArea relative">
-                <img src="${imagePath}/images/airship.png" width="230" height="47" class="marqueeImage">
-            </div>
 
-            <div class="textCenter mt5">
-                <img src="${imagePath}/images/top_main.png" width="290" height="290">
+            <h1 class="textCenter" style="padding: 50px 0; background-color: #fbe796;">
+                <div class="table autoMargin">
+                    <div class="cell">
+                        <img src="${imagePath}/images/top/top_main.png" width="120" height="120">
+                    </div>
+                    <div class="cell fs25 vMiddle pl10" style="line-height: 35px;">
+                        COUPON ISLAND<br>管理ツール
+                    </div>
+                </div>
+            </h1>
+
+            <nav>
+                <div class="textCenter" style="padding: 50px 0;">
+                    <div class="table autoMargin">
+                        <div class="cell ph10">
+                            <a href="${urlPath}/login" class="btn btnNormal jsTouchActive fs20" style="width: 180px; height: 60px; line-height: 45px;">ログイン</a>
+                        </div>
+                        <div class="cell ph10">
+                            <a href="${urlPath}/register" class="btn btnPrimary jsTouchActive fs20" style="width: 180px; height: 60px; line-height: 45px;">新規店舗登録</a>
+                        </div>
+                    </div>
+                    
+                    <div class="textCenter" style="margin-top: 30px;">
+                        ※こちらの管理ツールでクーポンやお店紹介情報の<br>登録・更新ができます。
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
+                Copyright &copy; hubfactory
             </div>
+        
         </section>
-
-        <nav>
-            <div>
-                <div class="textCenter mb10">
-                    <a href="${urlPath}/login" class="btn btnNormal jsTouchActive autoMargin">ログイン</a>
-                </div>
-                <div class="textCenter mb10">
-                    <a href="${urlPath}/register" class="btn btnPrimary jsTouchActive autoMargin">新規店舗登録</a>
-                </div>
-            </div>
-        </nav>
 
         <#-- 共通JavaScriptのインクルード -->
         <#include "/common/htmlFoot.ftl">
