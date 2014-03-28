@@ -71,6 +71,11 @@
 					$("#searchAreaDetailList_template").render(returnSearchAreaDefault())
 				);
 			}
+			
+			$('#js_areaDetailMessage').removeClass('none');
+            $('#js_areaDetailMessage').addClass('inlineBlock');
+            $('#js_areaDetailOkMessage').addClass('none');
+            $('#js_areaDetailOkMessage').removeClass('inlineBlock');
 		}
 
 		// ajax成功時にリストを取得

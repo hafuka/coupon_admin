@@ -7,12 +7,6 @@
 
     <body class="outline formContents">
 
-        <#if errorMsg!?has_content>
-            <div>
-                ${errorMsg!?html}
-            </div>
-        </#if>
-
         <section>
             <h1 style="padding: 10px; background-color: #fbe796;">
                 <div class="table autoMargin">
@@ -24,6 +18,12 @@
                     </div>
                 </div>
             </h1>
+            
+            <#if errorMsg!?has_content>
+                <div class="textCenter fcOrange fs18" style="margin-top: 30px;">
+                    ${errorMsg!?html}
+                </div>
+            </#if>
             
             <div class="formArea autoMargin" style="margin: 30px auto; width: 500px;">
                 <h1 class="mb10 fs20 p5">新規店舗登録</h1>

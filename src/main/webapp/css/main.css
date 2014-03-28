@@ -46,7 +46,7 @@ tr, th, td {
     padding: 2px;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
     font-size: 16px;
     line-height: 20px;
     border-radius: 5px;
@@ -74,6 +74,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 .textCenter { text-align: center; }
 .textRight { text-align: right; }
 .textLeft { text-align: left; }
+.fcGreen { color: green; }
 .fcBlue { color: #0000ff; }
 .fcRed { color: #ff0000; }
 .fcOrange { color: #ff6633; }
@@ -219,6 +220,10 @@ input[type="text"], input[type="email"], input[type="password"] {
 /* 背景 */
 .bgCream {
     background: #ffffee;
+}
+
+.bgOrange {
+    background: #ff6633;
 }
 
 .bgWhite {
