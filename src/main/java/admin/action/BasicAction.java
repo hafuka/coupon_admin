@@ -8,11 +8,15 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.struts.util.LabelValueBean;
 import org.seasar.struts.annotation.Execute;
 
+import coupon.dao.MShopCouponDao;
 import coupon.entity.MShop;
+import coupon.entity.MShopCoupon;
+import coupon.enums.RarityType;
 import coupon.service.PullDownService;
 import coupon.service.ShopService;
 import coupon.util.Images;
@@ -23,6 +27,8 @@ public class BasicAction extends BaseAction {
 	protected ShopService shopService;
 	@Resource
 	protected PullDownService pullDownService;
+	@Resource
+	protected MShopCouponDao mShopCouponDao;
 
 	/** IN項目 */
 	public String shopName;
@@ -33,12 +39,22 @@ public class BasicAction extends BaseAction {
 	public String station;
 	public String hdn_imamge;
 
+	public String srCouponText;
+	public String rCouponText;
+	public String nCouponText;
+	public Integer srScore;
+	public Integer rScore;
+	public Integer nScore;
+
 	public Integer areaId;
 	public Integer areaDetailId;
 	public Integer businessId;
 
 	/** OUT項目 */
 	public MShop shop;
+	public MShopCoupon srCoupon;
+	public MShopCoupon rCoupon;
+	public MShopCoupon nrCoupon;
 	public List<LabelValueBean> areaList;
 	public List<LabelValueBean> areaDetailList;
 	public List<LabelValueBean> businessList;
@@ -52,6 +68,26 @@ public class BasicAction extends BaseAction {
 	@Execute(validator = false)
 	public String index() {
 		this.shop = shopService.getMShop(loginAdminDto.shopId);
+		List<MShopCoupon> shopCoupons = shopService.getMShopCoupons(loginAdminDto.shopId);
+		if (CollectionUtils.isNotEmpty(shopCoupons)) {
+			for (MShopCoupon shopCoupon : shopCoupons) {
+				RarityType type = RarityType.getEnum(shopCoupon.rarity);
+				switch (type) {
+				case SR:
+					srCoupon = shopCoupon;
+					break;
+				case R:
+					rCoupon = shopCoupon;
+					break;
+				case N:
+					nrCoupon = shopCoupon;
+					break;
+				default:
+					throw new IllegalArgumentException("coupon rarity is error. rarity=" + shopCoupon.rarity);
+				}
+			}
+		}
+
 		this.areaList = pullDownService.getAreaList();
 		this.businessList = pullDownService.getBusinessList();
 
@@ -83,6 +119,7 @@ public class BasicAction extends BaseAction {
 			Images.writeImage("/var/www/images/coupon/"+fileName, Base64.decodeBase64(img));
 		}
 
+		// ショップ情報登録
 		MShop mShop = new MShop();
 		mShop.shopId = loginAdminDto.shopId;
 		mShop.shopName = this.shopName;
@@ -96,6 +133,42 @@ public class BasicAction extends BaseAction {
 		mShop.areaId = areaId;
 		mShop.areaDetailId = areaDetailId;
 		shopService.insertMShop(mShop);
+
+		// SRクーポン登録
+		if (StringUtils.isNotEmpty(this.srCouponText) && this.srScore != null) {
+			MShopCoupon mShopCoupon = new MShopCoupon();
+			mShopCoupon.shopId = loginAdminDto.shopId;
+			mShopCoupon.couponId = 1;
+			mShopCoupon.couponName = this.srCouponText;
+			mShopCoupon.probability = this.srScore;
+			mShopCoupon.limitDays = 7;
+			mShopCoupon.rarity = RarityType.SR.value;
+			mShopCouponDao.insert(mShopCoupon);
+		}
+
+		// Rクーポン登録
+		if (StringUtils.isNotEmpty(this.rCouponText) && this.rScore != null) {
+			MShopCoupon mShopCoupon = new MShopCoupon();
+			mShopCoupon.shopId = loginAdminDto.shopId;
+			mShopCoupon.couponId = 2;
+			mShopCoupon.couponName = this.rCouponText;
+			mShopCoupon.probability = this.rScore;
+			mShopCoupon.limitDays = 7;
+			mShopCoupon.rarity = RarityType.R.value;
+			mShopCouponDao.insert(mShopCoupon);
+		}
+
+		// Nクーポン登録
+		if (StringUtils.isNotEmpty(this.nCouponText) && this.nScore != null) {
+			MShopCoupon mShopCoupon = new MShopCoupon();
+			mShopCoupon.shopId = loginAdminDto.shopId;
+			mShopCoupon.couponId = 3;
+			mShopCoupon.couponName = this.nCouponText;
+			mShopCoupon.probability = this.nScore;
+			mShopCoupon.limitDays = 7;
+			mShopCoupon.rarity = RarityType.N.value;
+			mShopCouponDao.insert(mShopCoupon);
+		}
 
 		this.shop = mShop;
 

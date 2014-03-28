@@ -8,7 +8,7 @@
     <body class="outline formContents">
 
         <section>
-        
+
             <h1 style="padding: 10px; background-color: #fbe796;">
                 <div class="table autoMargin">
                     <div class="cell">
@@ -19,9 +19,9 @@
                     </div>
                 </div>
             </h1>
-            
+
             <h2 class="p10 fs20 textCenter bgWhite">店舗基本情報登録・変更</h2>
-            
+
             <div class="m20" data-ng-controller="mainCtrl">
                 <form method="post" action="${urlPath!?html}/basic/regist" name="frm" novalidate>
                     <h3 class="registMenu">１.イメージ画像</h3>
@@ -119,7 +119,7 @@
                             </select>
                         </p>
                     </div>
-                    
+
                     <div>
                         <h3 class="registMenu inlineBlock">１１.クーポン情報</h3>
                         <p class="pl10 fcOrange inlineBlock">※必須</p>
@@ -132,10 +132,10 @@
                                         <img src="${imagePath}/images/coupon/medal_sr.png" width="50" height="50" class="vMiddle">
                                     </div>
                                     <div class="cell vMiddle pr10" style="min-width:350px;">
-                                        <input type="text" id="srCouponText" name="srCouponText" placeholder="SRクーポン情報を入力してください" value="<#if shop!?has_content>${shop.station!?html}</#if>" data-ng-model="srCouponText">
+                                        <input type="text" id="srCouponText" name="srCouponText" placeholder="SRクーポン情報を入力してください" value="<#if srCoupon!?has_content>${srCoupon.couponName!?html}</#if>" data-ng-model="srCouponText">
                                     </div>
                                     <div class="cell vMiddle" style="min-width:100px;">
-                                        <input type="number" id="srScore" name="srScore" placeholder="パーセンテージを入力してください" min="1" max="99" value="0" data-ng-model="srScore">
+                                        <input type="number" id="srScore" name="srScore" placeholder="パーセンテージを入力してください" min="1" max="99" value="<#if srCoupon!?has_content>${srCoupon.probability!?html}<#else>0</#if>" data-ng-model="srScore">
                                     </div>
                                     <div class="cell vMiddle">
                                         ％
@@ -148,10 +148,10 @@
                                         <img src="${imagePath}/images/coupon/medal_r.png" width="50" height="50" class="vMiddle">
                                     </div>
                                     <div class="cell vMiddle pr10" style="min-width:350px;">
-                                        <input type="text" id="rCouponText" name="rCouponText" placeholder="SRクーポン情報を入力してください" value="<#if shop!?has_content>${shop.station!?html}</#if>" data-ng-model="rCouponText">
+                                        <input type="text" id="rCouponText" name="rCouponText" placeholder="Rクーポン情報を入力してください" value="<#if rCoupon!?has_content>${rCoupon.couponName!?html}</#if>" data-ng-model="rCouponText">
                                     </div>
                                     <div class="cell vMiddle" style="min-width:100px;">
-                                        <input type="number" id="rScore" name="rScore" placeholder="パーセンテージを入力してください" min="1" max="99" value="0" data-ng-model="rScore">
+                                        <input type="number" id="rScore" name="rScore" placeholder="パーセンテージを入力してください" min="1" max="99" value="<#if rCoupon!?has_content>${rCoupon.probability!?html}<#else>0</#if>" data-ng-model="rScore">
                                     </div>
                                     <div class="cell vMiddle">
                                         ％
@@ -164,10 +164,10 @@
                                         <img src="${imagePath}/images/coupon/medal_n.png" width="50" height="50" class="vMiddle">
                                     </div>
                                     <div class="cell vMiddle pr10" style="min-width:350px;">
-                                        <input type="text" id="nCouponText" name="nCouponText" placeholder="SRクーポン情報を入力してください" value="<#if shop!?has_content>${shop.station!?html}</#if>" data-ng-model="nCouponText">
+                                        <input type="text" id="nCouponText" name="nCouponText" placeholder="Nクーポン情報を入力してください" value="<#if nCoupon!?has_content>${nCoupon.couponName!?html}</#if>" data-ng-model="nCouponText">
                                     </div>
                                     <div class="cell vMiddle" style="min-width:100px;">
-                                        <input type="number" id="nScore" name="nScore" placeholder="パーセンテージを入力してください" min="1" max="99" value="0" data-ng-model="nScore">
+                                        <input type="number" id="nScore" name="nScore" placeholder="パーセンテージを入力してください" min="1" max="99" value="<#if nCoupon!?has_content>${nCoupon.probability!?html}<#else>0</#if>" data-ng-model="nScore">
                                     </div>
                                     <div class="cell vMiddle">
                                         ％
@@ -195,18 +195,18 @@
             <div id="js_registArea" class="textCenter" style="margin: 20px 0 40px 0;">
                 <a id="js_registBtn" href="javascript:void(0)" class="btn btnPrimary jsTouchActive autoMargin" style="width: 250px; height: 60px; line-height: 45px;">登録する</a>
             </div>
-            
+
             <div id="js_noRegistArea" class="textCenter" style="margin: 20px 0 40px 0;">
                 <a id="js_noRegistBtn" href="javascript:void(0)" class="btn btnNoActive autoMargin" style="width: 250px; height: 60px; line-height: 20px;">入力が全てOKになると<br>登録できます</a>
             </div>
-            
-            
+
+
             <nav>
                 <div class="textCenter" style="margin: 20px 0 40px 0;">
                     <a href="${urlPath}/menu" class="btn btnNormal jsTouchActive autoMargin" style="width: 250px;">メニューへ戻る</a>
                 </div>
             </nav>
-            
+
             <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
                 Copyright &copy; hubfactory
             </div>
