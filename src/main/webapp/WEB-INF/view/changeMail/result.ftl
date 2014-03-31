@@ -22,7 +22,7 @@
 
             <h2 class="p10 fs20 textCenter bgWhite">ログインメールアドレス変更完了</h2>
 
-            <div class="m20" data-ng-controller="mainCtrl">
+            <div class="m20">
                 <div>
                     <h3 class="registMenu inlineBlock">${loginAdminDto.mail!?html}に変更しました</h3>
                 </div>

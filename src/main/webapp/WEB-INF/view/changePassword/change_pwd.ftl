@@ -22,12 +22,12 @@
 
             <h2 class="p10 fs20 textCenter bgWhite">パスワード変更</h2>
 
-            <div class="m20" data-ng-controller="mainCtrl">
-                <form method="post" action="${urlPath!?html}/changePassword/update" name="frm" novalidate>
+            <div class="m20">
+                <form method="post" action="${urlPath!?html}/changePassword/update" name="frm">
                     <div>
                         <h3 class="registMenu inlineBlock">新パスワード</h3>
                         <p class="pl10 fcOrange inlineBlock">※必須</p>
-                        <input type="text" id="newPassword" name="newPassword" value="" ng-model="newPassword" required>
+                        <input type="text" id="newPassword" name="newPassword" value="">
                     </div>
                 </form>
             </div>
