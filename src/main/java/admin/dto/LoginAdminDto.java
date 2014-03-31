@@ -11,4 +11,6 @@ import org.seasar.framework.container.annotation.tiger.InstanceType;
 @Component(instance = InstanceType.SESSION)
 public class LoginAdminDto implements Serializable {
 	public Integer shopId;
+	public String mail;
+	public String password;
 }

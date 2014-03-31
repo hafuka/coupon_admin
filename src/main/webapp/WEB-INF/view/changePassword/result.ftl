@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-ng-app>
     <head>
         <#-- 共通headのインクルード -->
         <#include "/common/htmlHead.ftl">
     </head>
 
     <body class="outline formContents">
+
         <section>
+
             <h1 style="padding: 10px; background-color: #fbe796;">
                 <div class="table autoMargin">
                     <div class="cell">
@@ -18,25 +20,19 @@
                 </div>
             </h1>
 
-            <h2 class="p10 fs20 textCenter bgWhite">メニュー一覧</h2>
+            <h2 class="p10 fs20 textCenter bgWhite">パスワード変更完了</h2>
 
-            <div class="m20">
-                <div class="m10 fs22">
-                    <a href="${urlPath!?html}/basic" class="link2">１.店舗情報登録・変更</a>
-                </div>
-                <div class="m10 fs22">
-                    <a href="${urlPath!?html}/changeMail" class="link2">２.メールアドレス変更</a>
-                </div>
-                <div class="m10 fs22">
-                    <a href="${urlPath!?html}/changePassword" class="link2">３.パスワード変更</a>
-                </div>
-                <div class="m10 fs22">
-                    <a href="${urlPath!?html}/howto" class="link2">４.クーポンをもっているお客さんへのご対応について</a>
-                </div>
-                <div class="m10 fs22">
-                    <a href="${urlPath!?html}/howto#ac_storeDetail" class="link2">５.店舗詳細ページイメージ図</a>
+            <div class="m20" data-ng-controller="mainCtrl">
+                <div>
+                    <h3 class="registMenu inlineBlock">${loginAdminDto.password!?html}に変更しました</h3>
                 </div>
             </div>
+
+            <nav>
+                <div class="textCenter" style="margin: 20px 0 40px 0;">
+                    <a href="${urlPath}/menu" class="btn btnNormal jsTouchActive autoMargin" style="width: 250px;">メニューへ戻る</a>
+                </div>
+            </nav>
 
             <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
                 Copyright &copy; hubfactory
@@ -45,6 +41,5 @@
 
         <#-- 共通JavaScriptのインクルード -->
         <#include "/common/htmlFoot.ftl">
-
     </body>
 </html>
