@@ -49,7 +49,7 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public void updatePassword(IAdminAuthentication iAdminAuthentication, String newPassword) throws Exception {
-		iAdminAuthentication.password = newPassword;
+		iAdminAuthentication.password = CryptUtils.encrypt(newPassword);
 		iAdminAuthentication.updDatetime = CouponDateUtils.getCurrentDate();
 		iAdminAuthenticationDao.update(iAdminAuthentication);
 	}
