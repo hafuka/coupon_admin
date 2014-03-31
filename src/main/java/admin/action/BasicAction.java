@@ -172,7 +172,7 @@ public class BasicAction extends BaseAction {
 
 		this.shop = mShop;
 
-		return "/basic?redirect=true";
+		return "result.ftl";
 	}
 
 	/**
