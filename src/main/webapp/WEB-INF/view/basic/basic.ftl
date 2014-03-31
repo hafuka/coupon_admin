@@ -108,7 +108,7 @@
                     <div>
                         <h3 class="registMenu inlineBlock">１０.業種</h3>
                         <p class="pl10 fcOrange inlineBlock">※必須</p>
-                        <p id="js_businessMessage" class="bgOrange fcWhite p5 mb5 fs14 inlineBlock">★エリアを選択してください★</p>
+                        <p id="js_businessMessage" class="bgOrange fcWhite p5 mb5 fs14 inlineBlock">★業種を選択してください★</p>
                         <p class="pl10 fcGreen inlineBlock">{{okMessageBusinessId}}</p>
                         <p>
                             <select name="businessId" ng-model="businessId">
