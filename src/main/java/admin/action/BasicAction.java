@@ -35,7 +35,7 @@ public class BasicAction extends BaseAction {
 	public String description;
 	public String url;
 	public String address;
-	public String tell;
+	public String tel;
 	public String station;
 	public String hdn_imamge;
 
@@ -54,7 +54,7 @@ public class BasicAction extends BaseAction {
 	public MShop shop;
 	public MShopCoupon srCoupon;
 	public MShopCoupon rCoupon;
-	public MShopCoupon nrCoupon;
+	public MShopCoupon nCoupon;
 	public List<LabelValueBean> areaList;
 	public List<LabelValueBean> areaDetailList;
 	public List<LabelValueBean> businessList;
@@ -80,7 +80,7 @@ public class BasicAction extends BaseAction {
 					rCoupon = shopCoupon;
 					break;
 				case N:
-					nrCoupon = shopCoupon;
+					nCoupon = shopCoupon;
 					break;
 				default:
 					throw new IllegalArgumentException("coupon rarity is error. rarity=" + shopCoupon.rarity);
@@ -126,13 +126,13 @@ public class BasicAction extends BaseAction {
 		mShop.description = this.description;
 		mShop.url = this.url;
 		mShop.address = this.address;
-		mShop.tell = this.tell;
+		mShop.tell = this.tel;
 		mShop.station = this.station;
 		mShop.premiumFlg = 0;
-		mShop.businessId = businessId;
-		mShop.areaId = areaId;
-		mShop.areaDetailId = areaDetailId;
-		shopService.insertMShop(mShop);
+		mShop.businessId = this.businessId;
+		mShop.areaId = this.areaId;
+		mShop.areaDetailId = this.areaDetailId;
+		shopService.registMShop(mShop);
 
 		// SRクーポン登録
 		if (StringUtils.isNotEmpty(this.srCouponText) && this.srScore != null) {
@@ -143,7 +143,7 @@ public class BasicAction extends BaseAction {
 			mShopCoupon.probability = this.srScore;
 			mShopCoupon.limitDays = 7;
 			mShopCoupon.rarity = RarityType.SR.value;
-			mShopCouponDao.insert(mShopCoupon);
+			shopService.registMShopCoupon(mShopCoupon);
 		}
 
 		// Rクーポン登録
@@ -155,7 +155,7 @@ public class BasicAction extends BaseAction {
 			mShopCoupon.probability = this.rScore;
 			mShopCoupon.limitDays = 7;
 			mShopCoupon.rarity = RarityType.R.value;
-			mShopCouponDao.insert(mShopCoupon);
+			shopService.registMShopCoupon(mShopCoupon);
 		}
 
 		// Nクーポン登録
@@ -167,7 +167,7 @@ public class BasicAction extends BaseAction {
 			mShopCoupon.probability = this.nScore;
 			mShopCoupon.limitDays = 7;
 			mShopCoupon.rarity = RarityType.N.value;
-			mShopCouponDao.insert(mShopCoupon);
+			shopService.registMShopCoupon(mShopCoupon);
 		}
 
 		this.shop = mShop;
