@@ -27,14 +27,13 @@
                     <div>
                         <h3 class="registMenu inlineBlock">新パスワード</h3>
                         <p class="pl10 fcOrange inlineBlock">※必須</p>
-                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" ng-show="frm.shopName.$error.required">★新しいメールアドレスを入力してください★</p>
                         <input type="text" id="newPassword" name="newPassword" value="" ng-model="newPassword" required>
                     </div>
                 </form>
             </div>
 
             <div id="js_registArea" class="textCenter" style="margin: 20px 0 40px 0;">
-                <a id="js_registBtn" href="javascript:void(0)" class="btn btnPrimary jsTouchActive autoMargin" style="width: 250px; height: 60px; line-height: 45px;">登録する</a>
+                <a id="js_registBtn" href="javascript:void(0)" class="btn btnPrimary jsTouchActive autoMargin" style="width: 250px; height: 60px; line-height: 45px;">変更する</a>
             </div>
 
             <nav>
