@@ -41,6 +41,6 @@ public class ChangePasswordAction extends BaseAction {
 
 		loginAdminDto.password = this.newPassword;
 
-		return null;
+		return "result.ftl";
 	}
 }
