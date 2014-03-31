@@ -33,7 +33,7 @@
                         <input type="file" id="files" name="image" enctype="multipart/form-data" />
                         <output id="list"></output>
                     </div>
-                    <p class="pv5">※[300px] x [300px] の正方形画像で登録をおねがいします。</p>
+                    <p class="pv5">※[300px] x [300px] 以上の正方形画像で登録をおねがいします。</p>
                     <div>
                         <h3 class="registMenu inlineBlock">２.店舗名</h3>
                         <p class="pl10 fcOrange inlineBlock">※必須</p>
