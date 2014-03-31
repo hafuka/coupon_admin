@@ -193,7 +193,7 @@
             </div>
 
             <div id="js_registArea" class="textCenter" style="margin: 20px 0 40px 0;">
-                <a id="js_registBtn" href="javascript:void(0)" class="btn btnPrimary jsTouchActive autoMargin" style="width: 250px; height: 60px; line-height: 45px;">登録する</a>
+                <a id="js_registBtn" href="javascript:void(0)" class="btn btnPrimary jsTouchActive autoMargin" style="width: 250px; height: 60px; line-height: 45px;">登録・変更する</a>
             </div>
 
             <div id="js_noRegistArea" class="textCenter" style="margin: 20px 0 40px 0;">
