@@ -37,16 +37,16 @@
                     <div>
                         <h3 class="registMenu inlineBlock">２.店舗名</h3>
                         <p class="pl10 fcOrange inlineBlock">※必須</p>
-                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" ng-show="frm.shopName.$error.required">★店舗名を入力してください★</p>
+                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" data-ng-show="frm.shopName.$error.required">★店舗名を入力してください★</p>
                         <p class="pl10 fcGreen inlineBlock">{{okMessageShopName}}</p>
-                        <input type="text" id="shopName" name="shopName" value="<#if shop!?has_content>${shop.shopName!?html}</#if>" ng-model="shopName" required>
+                        <input type="text" id="shopName" name="shopName" value="<#if shop!?has_content>${shop.shopName!?html}</#if>" data-ng-model="shopName" required>
                     </div>
                     <div>
                         <h3 class="registMenu inlineBlock">３.店舗説明</h3>
                         <p class="pl10 fcOrange inlineBlock">※必須</p>
-                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" ng-show="frm.description.$error.required">★店舗の説明を入力してください★</p>
+                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" data-ng-show="frm.description.$error.required">★店舗の説明を入力してください★</p>
                         <p class="pl10 fcGreen inlineBlock">{{okMessageDescription}}</p>
-                        <input type="text" id="description" name="description" value="<#if shop!?has_content>${shop.description!?html}</#if>" ng-model="description" required>
+                        <input type="text" id="description" name="description" value="<#if shop!?has_content>${shop.description!?html}</#if>" data-ng-model="description" required>
                     </div>
                     <div>
                         <h3 class="registMenu">４.URL</h3>
@@ -55,25 +55,25 @@
                     <div>
                         <h3 class="registMenu inlineBlock">５.電話番号</h3>
                         <p class="pl10 fcOrange inlineBlock">※必須</p>
-                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" ng-show="frm.tel.$error.required">★電話番号を入力してください★</p>
-                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" ng-show="frm.tel.$error.minlength">★電話番号を入力してください★</p>
+                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" data-ng-show="frm.tel.$error.required">★電話番号を入力してください★</p>
+                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" data-ng-show="frm.tel.$error.minlength">★電話番号を入力してください★</p>
                         <p class="pl10 fcGreen inlineBlock">{{okMessageTel}}</p>
-                        <input type="text" id="tel" name="tel" value="<#if shop!?has_content>${shop.tell!?html}</#if>" ng-model="tel" required ng-minlength="12">
+                        <input type="text" id="tel" name="tel" value="<#if shop!?has_content>${shop.tell!?html}</#if>" data-ng-model="tel" required data-ng-minlength="12">
                         <p class="pt5">（例）01-2345-6789</p>
                     </div>
                     <div>
                         <h3 class="registMenu inlineBlock">６.住所</h3>
                         <p class="pl10 fcOrange inlineBlock">※必須</p>
-                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" ng-show="frm.address.$error.required">★住所を入力してください★</p>
+                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" data-ng-show="frm.address.$error.required">★住所を入力してください★</p>
                         <p class="pl10 fcGreen inlineBlock">{{okMessageAddress}}</p>
-                        <input type="text" id="address" name="address" value="<#if shop!?has_content>${shop.address!?html}</#if>" ng-model="address" required>
+                        <input type="text" id="address" name="address" value="<#if shop!?has_content>${shop.address!?html}</#if>" data-ng-model="address" required>
                     </div>
                     <div>
                         <h3 class="registMenu inlineBlock">７.最寄駅</h3>
                         <p class="pl10 fcOrange inlineBlock">※必須</p>
-                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" ng-show="frm.station.$error.required">★最寄駅を入力してください★</p>
+                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" data-ng-show="frm.station.$error.required">★最寄駅を入力してください★</p>
                         <p class="pl10 fcGreen inlineBlock">{{okMessageStation}}</p>
-                        <input type="text" id="station" name="station" value="<#if shop!?has_content>${shop.station!?html}</#if>" ng-model="station" required>
+                        <input type="text" id="station" name="station" value="<#if shop!?has_content>${shop.station!?html}</#if>" data-ng-model="station" required>
                     </div>
                     <div>
                         <h3 class="registMenu inlineBlock">８.地域</h3>
@@ -81,7 +81,7 @@
                         <p id="js_areaMessage" class="bgOrange fcWhite p5 mb5 fs14 inlineBlock">★地域を選択してください★</p>
                         <p class="pl10 fcGreen inlineBlock">{{okMessageAreaId}}</p>
                         <p>
-                            <select id="js_areaChange" name="areaId" ng-model="areaId">
+                            <select id="js_areaChange" name="areaId" data-ng-model="areaId">
                                 <option value="0">地域を選択してください</option>
                                 <#list areaList as area>
                                     <option value="${area.value!?html}" <#if (area.value == '${dispAreaId!?html}')>selected</#if> >${area.label!?html}</option>
@@ -95,7 +95,7 @@
                         <p id="js_areaDetailMessage" class="bgOrange fcWhite p5 mb5 fs14 inlineBlock">★エリアを選択してください★</p>
                         <p id="js_areaDetailOkMessage" class="pl10 fcGreen inlineBlock">{{okMessageAreaDetailId}}</p>
                         <p>
-                            <select id="js_searchAreaDetailList" name="areaDetailId" ng-model="areaDetailId">
+                            <select id="js_searchAreaDetailList" name="areaDetailId" data-ng-model="areaDetailId">
                                 <option value="0">ｴﾘｱを選択してください</option>
                                 <#if areaDetailList!?has_content>
                                 <#list areaDetailList as areaDetail>
@@ -111,7 +111,7 @@
                         <p id="js_businessMessage" class="bgOrange fcWhite p5 mb5 fs14 inlineBlock">★業種を選択してください★</p>
                         <p class="pl10 fcGreen inlineBlock">{{okMessageBusinessId}}</p>
                         <p>
-                            <select name="businessId" ng-model="businessId">
+                            <select name="businessId" data-ng-model="businessId">
                                 <option value="0">業種を選択してください</option>
                                 <#list businessList as business>
                                     <option value="${business.value!?html}" <#if (business.value == '${dispBusinessId!?html}')>selected</#if> >${business.label!?html}</option>

@@ -116,7 +116,7 @@ function mainCtrl($scope){
     });
     
     //エリア必須項目メッセージ用
-    $scope.areaDetailId = $('select[name=areaId]').val();
+    $scope.areaDetailId = $('select[name=areaDetailId]').val();
     $scope.okMessageAreaDetailId = '';
     $scope.areaDetailIdSuccess = false;
     
