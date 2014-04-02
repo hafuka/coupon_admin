@@ -3,19 +3,19 @@
     "http://www.seasar.org/dtd/components24.dtd">
 <components namespace="mailProperties">
 	<component name="host">
-	   "smtp.double-crop.jp"
+	   "interlude-design.sakura.ne.jp"
     </component>
 	<component name="port">
 	   587
 	</component>
 	<component name="username">
-	   "nakajima@double-crop.jp"
+	   "coupon-island@hubfactory.jp"
 	</component>
 	<component name="password">
-	   "G6rGnoZW"
+	   "HUBcoupon7"
 	</component>
 	<component name="from">
-	   "hafuka@double-crop.jp"
+	   "coupon-island@hubfactory.jp"
 	</component>
 	<component name="replyTo">
 		null
