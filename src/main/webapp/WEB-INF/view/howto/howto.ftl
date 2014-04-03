@@ -55,6 +55,23 @@
                 </div>
             </nav>
             
+            <h2 id="ac_storeOther" class="p10 fs20 textCenter bgWhite">その他</h2>
+
+            <div class="m20 bgWhite p10">
+                <p>
+                    ・退会される場合（サービスを使わない、移転・閉店されるなど）には下記までご一報ください。<br>
+                    【問い合わせ先】<br>
+                    HUBFACTORY（屋号） 太田/羽深宛<br>
+                    メールアドレス：coupon-island@hubfactory.jp
+                </p>
+            </div>
+            
+            <nav>
+                <div class="textCenter" style="margin: 20px 0 40px 0;">
+                    <a href="${urlPath}/menu" class="btn btnNormal jsTouchActive autoMargin" style="width: 250px;">メニューへ戻る</a>
+                </div>
+            </nav>
+            
             <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
                 Copyright &copy; hubfactory
             </div>

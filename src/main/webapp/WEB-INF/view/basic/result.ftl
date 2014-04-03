@@ -24,7 +24,7 @@
 
             <div class="m20" data-ng-controller="mainCtrl">
                 <div>
-                    <h3 class="registMenu inlineBlock">登録しました</h3>
+                    <h3 class="registMenu textCenter">登録しました</h3>
                 </div>
             </div>
 
