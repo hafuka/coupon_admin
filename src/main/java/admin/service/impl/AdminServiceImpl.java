@@ -22,16 +22,20 @@ public class AdminServiceImpl implements AdminService {
 	public Integer regist(String email, String password) throws Exception {
 
 		Timestamp nowDate = CouponDateUtils.getCurrentDate();
-		Integer shopId = iAdminAuthenticationDao.findMaxShopId() + 1;
+		Integer nextShopId = 1;
+		Integer maxShopId = iAdminAuthenticationDao.findMaxShopId();
+		if (maxShopId != null) {
+			nextShopId = maxShopId + 1;
+		}
 		IAdminAuthentication record = new IAdminAuthentication();
-		record.shopId = shopId;
+		record.shopId = nextShopId;
 		record.email = email;
 		record.password = CryptUtils.encrypt(password);
 		record.insDatetime = nowDate;
 		record.updDatetime = nowDate;
 		iAdminAuthenticationDao.insert(record);
 
-		return shopId;
+		return nextShopId;
 
 	}
 
