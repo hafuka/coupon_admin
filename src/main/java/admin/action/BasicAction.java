@@ -93,7 +93,7 @@ public class BasicAction extends BaseAction {
 
 		if (shop != null) {
 
-			dispImagePath = Images.getImageFilePath(shop.shopId);
+			dispImagePath = shop.imgPath;
 
 			if (shop.areaId != null) {
 				this.areaDetailList = pullDownService.getAreaDetailList(shop.areaId);
@@ -112,10 +112,15 @@ public class BasicAction extends BaseAction {
 	@Execute(validator = false)
 	public String regist() throws FileNotFoundException, IOException {
 
+		String imgPath = null;
+
 		if (!StringUtils.isEmpty(this.hdn_imamge)) {
 			String img = this.hdn_imamge;
 			img = img.replaceFirst("data:image/jpeg;base64,", "");
 			String fileName = loginAdminDto.shopId + ".jpg";
+
+			imgPath = Images.getImageFilePath(loginAdminDto.shopId);
+
 			Images.writeImage("/var/www/images/coupon/"+fileName, Base64.decodeBase64(img));
 		}
 
@@ -132,6 +137,7 @@ public class BasicAction extends BaseAction {
 		mShop.businessId = this.businessId;
 		mShop.areaId = this.areaId;
 		mShop.areaDetailId = this.areaDetailId;
+		mShop.imgPath = imgPath;
 		shopService.registMShop(mShop);
 
 		// SRクーポン登録

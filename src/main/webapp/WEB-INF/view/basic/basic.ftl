@@ -28,6 +28,8 @@
                     <input type="hidden" id="hdn_imamge" name="hdn_imamge">
                     <#if dispImagePath!?has_content>
                         <img src="${dispImagePath!?html}">
+                    <#else>
+                    	<img src="${imagePath}/images/common/no_image.png">
                     </#if>
                     <div>
                         <input type="file" id="files" name="image" enctype="multipart/form-data" />
