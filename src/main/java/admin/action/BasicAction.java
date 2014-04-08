@@ -121,7 +121,7 @@ public class BasicAction extends BaseAction {
 
 			imgPath = Images.getImageFilePath(loginAdminDto.shopId);
 
-			Images.writeImage("/var/www/images/coupon/"+fileName, Base64.decodeBase64(img));
+			Images.writeImage(fileName, Base64.decodeBase64(img));
 		}
 
 		// ショップ情報登録
