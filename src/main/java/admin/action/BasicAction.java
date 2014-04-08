@@ -13,13 +13,13 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.struts.util.LabelValueBean;
 import org.seasar.struts.annotation.Execute;
 
+import admin.util.Images;
 import coupon.dao.MShopCouponDao;
 import coupon.entity.MShop;
 import coupon.entity.MShopCoupon;
 import coupon.enums.RarityType;
 import coupon.service.PullDownService;
 import coupon.service.ShopService;
-import coupon.util.Images;
 
 public class BasicAction extends BaseAction {
 
