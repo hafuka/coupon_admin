@@ -9,7 +9,7 @@ import admin.dto.RegistMailDto;
  */
 public interface MailMai {
 
-  @Subject("【coupon island】店舗登録")
+  @Subject("【COUPON-ISLAND】会員登録完了のお知らせ")
   public void sendRegistMail(RegistMailDto dto);
 
 }
