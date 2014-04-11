@@ -18,20 +18,20 @@
                     </div>
                 </div>
             </h1>
-            
+
             <#if errorMsg!?has_content>
                 <div class="textCenter fcOrange fs18" style="margin-top: 30px;">
                     ${errorMsg!?html}
                 </div>
             </#if>
-            
+
             <div class="formArea autoMargin" style="margin: 30px auto; width: 500px;">
                 <h1 class="mb10 fs20 p5">新規店舗登録</h1>
                 <div class="fs18" style="line-height: 25px;">
                     <form method="post" action="${urlPath!?html}/register/regist" name="frm">
                         ①メールアドレスを入力し、送信ボタンを押してください。<br>
                         ②しばらくすると、入力したメールアドレス宛てにログイン用のパスワードが送信されます。<br>
-                        ※メール拒否設定をしている場合は、@xxxxx.xxxのドメインからのメールを受信できるように設定してください。
+                        ※メール拒否設定をしている場合は、@hubfactory.jpのドメインからのメールを受信できるように設定してください。
                         <div class="mv10">
                             <input type="email" name="email" id="email" placeholder="メールアドレスを入力して下さい" value="${email!?html}">
                         </div>
@@ -48,7 +48,7 @@
                 <a href="${urlPath}/" class="btn btnNormal jsTouchActive autoMargin" style="width: 250px;">TOPへ戻る</a>
             </div>
         </nav>
-        
+
         <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
             Copyright &copy; hubfactory
         </div>
