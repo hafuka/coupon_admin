@@ -7,5 +7,6 @@
   <include path="j2ee.dicon"/>
   <include path="s2jdbc.dicon"/>
   <include path="s2mai.dicon"/>
+  <include path="env.dicon"/>
   <component name="actionMessagesThrowsInterceptor" class="org.seasar.struts.interceptor.ActionMessagesThrowsInterceptor"/>
 </components>

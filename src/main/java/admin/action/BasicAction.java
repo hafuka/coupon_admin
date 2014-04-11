@@ -30,6 +30,11 @@ public class BasicAction extends BaseAction {
 	@Resource
 	protected MShopCouponDao mShopCouponDao;
 
+	@Resource
+	protected String writeImagePath;
+	@Resource
+	protected String readImagePath;
+
 	/** IN項目 */
 	public String shopName;
 	public String description;
@@ -115,13 +120,10 @@ public class BasicAction extends BaseAction {
 		String imgPath = null;
 
 		if (!StringUtils.isEmpty(this.hdn_imamge)) {
-			String img = this.hdn_imamge;
-			img = img.replaceFirst("data:image/jpeg;base64,", "");
-			String fileName = loginAdminDto.shopId + ".jpg";
-
-			imgPath = Images.getImageFilePath(loginAdminDto.shopId);
-
-			Images.writeImage(fileName, Base64.decodeBase64(img));
+			String img = this.hdn_imamge.replaceFirst("data:image/jpeg;base64,", "");
+			String filePath = writeImagePath + loginAdminDto.shopId + ".jpg";
+			imgPath = readImagePath + loginAdminDto.shopId + ".jpg";
+			Images.writeImage(filePath, Base64.decodeBase64(img));
 		}
 
 		// ショップ情報登録
