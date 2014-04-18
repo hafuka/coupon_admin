@@ -47,6 +47,11 @@ public class BasicAction extends BaseAction {
 	public String srCouponText;
 	public String rCouponText;
 	public String nCouponText;
+
+	public String srCouponDescription;
+	public String rCouponDescription;
+	public String nCouponDescription;
+
 	public Integer srScore;
 	public Integer rScore;
 	public Integer nScore;
@@ -148,6 +153,7 @@ public class BasicAction extends BaseAction {
 			mShopCoupon.shopId = loginAdminDto.shopId;
 			mShopCoupon.couponId = 1;
 			mShopCoupon.couponName = this.srCouponText;
+			mShopCoupon.description = this.srCouponDescription;
 			mShopCoupon.probability = this.srScore;
 			mShopCoupon.limitDays = 7;
 			mShopCoupon.rarity = RarityType.SR.value;
@@ -160,6 +166,7 @@ public class BasicAction extends BaseAction {
 			mShopCoupon.shopId = loginAdminDto.shopId;
 			mShopCoupon.couponId = 2;
 			mShopCoupon.couponName = this.rCouponText;
+			mShopCoupon.description = this.rCouponDescription;
 			mShopCoupon.probability = this.rScore;
 			mShopCoupon.limitDays = 7;
 			mShopCoupon.rarity = RarityType.R.value;
@@ -172,6 +179,7 @@ public class BasicAction extends BaseAction {
 			mShopCoupon.shopId = loginAdminDto.shopId;
 			mShopCoupon.couponId = 3;
 			mShopCoupon.couponName = this.nCouponText;
+			mShopCoupon.description = this.nCouponDescription;
 			mShopCoupon.probability = this.nScore;
 			mShopCoupon.limitDays = 7;
 			mShopCoupon.rarity = RarityType.N.value;

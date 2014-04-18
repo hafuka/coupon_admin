@@ -143,6 +143,9 @@
                                         ％
                                     </div>
                                 </div>
+                                <div class="cell vMiddle pr10" style="min-width:350px;">
+                                    <input type="text" id="srCouponDescription" name="srCouponDescription" placeholder="SRクーポンの説明・条件を入力してください" value="<#if srCoupon!?has_content>${srCoupon.description!?html}</#if>">
+                                </div>
                             </li>
                             <li class="couponDetailList rCouponBg">
                                 <div class="table" style="width: 100%;">
@@ -159,6 +162,9 @@
                                         ％
                                     </div>
                                 </div>
+                                <div class="cell vMiddle pr10" style="min-width:350px;">
+                                    <input type="text" id="rCouponDescription" name="rCouponDescription" placeholder="Rクーポンの説明・条件を入力してください" value="<#if rCoupon!?has_content>${rCoupon.description!?html}</#if>">
+                                </div>
                             </li>
                             <li class="couponDetailList nCouponBg">
                                 <div class="table" style="width: 100%;">
@@ -174,6 +180,9 @@
                                     <div class="cell vMiddle">
                                         ％
                                     </div>
+                                </div>
+                                <div class="cell vMiddle pr10" style="min-width:350px;">
+                                    <input type="text" id="nCouponDescription" name="nCouponDescription" placeholder="Nクーポンの説明・条件を入力してください" value="<#if nCoupon!?has_content>${nCoupon.description!?html}</#if>">
                                 </div>
                             </li>
                         </ul>
