@@ -39,6 +39,9 @@
                 <div class="m10 fs22">
                     <a href="${urlPath!?html}/howto#ac_storeOther" class="link2">6.その他、お問い合わせ先</a>
                 </div>
+                <div class="m10 fs22">
+                    <a href="http://coupon-island.com/coupon/static/?page=terms" class="link2" target="_blank">7.ご利用規約（サービス内）</a>
+                </div>
             </div>
 
             <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
