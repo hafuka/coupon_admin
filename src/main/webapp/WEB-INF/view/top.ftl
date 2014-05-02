@@ -37,6 +37,10 @@
                 </div>
             </nav>
             
+            <div class="m10 fs16 textCenter">
+                <a href="http://coupon-island.com/coupon/static/?page=terms" class="link2" target="_blank">ご利用規約</a>
+            </div>
+            
             <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
                 Copyright &copy; hubfactory
             </div>
