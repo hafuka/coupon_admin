@@ -27,13 +27,17 @@
                     <h3 class="registMenu">１.イメージ画像</h3>
                     <input type="hidden" id="hdn_imamge" name="hdn_imamge">
                     <#if dispImagePath!?has_content>
-                        <img src="${dispImagePath!?html}">
+                        <img id="js_image" src="${dispImagePath!?html}" width="300">
                     <#else>
-                    	<img src="${imagePath}/images/common/no_image.png">
+                    	<img id="js_image" src="${imagePath}/images/common/no_image.png" width="300">
                     </#if>
                     <div>
+                    	<input type="file" id="fileSelector" multiple accept="image/*" />
+						<ul id="fileContentList" style="list-style-type: none;"></ul>
+                        <#--
                         <input type="file" id="files" name="image" enctype="multipart/form-data" />
                         <output id="list"></output>
+                        -->
                     </div>
                     <p class="pv5">※[300px] x [300px] 以上の正方形画像で登録をおねがいします。</p>
                     <div>
@@ -228,6 +232,7 @@
         <script src="/coupon_admin/js/angular.min.js"></script>
         <script src="/coupon_admin/js/ang_basic.js"></script>
         <script src="/coupon_admin/js/basic.js"></script>
+        <script src="/coupon_admin/js/utilities.js"></script>
         <script>
             //グローバルで使う変数を定義
             var urlPath = '${urlPath}';

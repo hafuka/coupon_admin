@@ -126,6 +126,7 @@ public class BasicAction extends BaseAction {
 
 		if (!StringUtils.isEmpty(this.hdn_imamge)) {
 			String img = this.hdn_imamge.replaceFirst("data:image/jpeg;base64,", "");
+			img = img.replaceFirst("data:;base64,", "");
 			String filePath = writeImagePath + loginAdminDto.shopId + ".jpg";
 			imgPath = readImagePath + loginAdminDto.shopId + ".jpg";
 			Images.writeImage(filePath, Base64.decodeBase64(img));
