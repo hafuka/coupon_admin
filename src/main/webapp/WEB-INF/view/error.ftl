@@ -7,9 +7,6 @@
 
     <body class="outline mypageContents">
 
-        <#-- ヘッダーメニューのインクルード -->
-        <#include "/common/header.ftl">
-        
         <#-- ふきだしナビ -->
         <section>
             <div class="autoMargin mv20 table">
@@ -35,9 +32,6 @@
                 <a href="${urlPath}/" class="btn btnNormal jsTouchActive autoMargin">TOPへ</a>
             </div>
         </nav>
-
-        <#-- フッターメニューのインクルード -->
-        <#include "/common/footer.ftl">
 
         <#-- 共通JavaScriptのインクルード -->
         <#include "/common/htmlFoot.ftl">
