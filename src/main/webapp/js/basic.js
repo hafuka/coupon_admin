@@ -5,7 +5,19 @@
 		} else {
 		  alert('The File APIs are not fully supported in this browser.');
 		}
+		/*
+		var message = [];
+		if (!document.getElementById('fileSelector').files) {
+			message = '<p>The ' +
+            '<a href="http://dev.w3.org/2006/webapi/FileAPI/" target="_blank">File API</a>s ' +
+            'are not fully supported by this browser.</p>' +
+            '<p>Upgrade your browser to the latest version.</p>';
 
+			document.querySelector('body').innerHTML = message;
+		} else {
+			document.getElementById('fileSelector').addEventListener('change', handleFileSelection, false); // Add an onchange event listener for the <input id="fileSelector"> element.
+		}
+		*/
 		function handleFileSelection(evt) {
 			var files = evt.target.files; // The files selected by the user (as a FileList object).
 
@@ -45,8 +57,7 @@
 			reader.readAsDataURL(file);
 
 		} // handleFileSelection
-
-	      document.getElementById('fileSelector').addEventListener('change', handleFileSelection, false);
+		document.getElementById('fileSelector').addEventListener('change', handleFileSelection, false);
 /*
 		function handleFileSelect(evt) {
 

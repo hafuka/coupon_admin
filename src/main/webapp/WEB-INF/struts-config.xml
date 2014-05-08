@@ -14,6 +14,12 @@
 <!-- ================================= Global Exception Definitions -->
 
     <global-exceptions>
+    	<exception
+	    	key=""
+	    	path="/error.ftl"
+	    	type="java.lang.Exception"
+	    	handler="org.apache.struts.action.ExceptionHandler"
+	    />
     </global-exceptions>
 
 <!-- =================================== Global Forward Definitions -->
@@ -25,7 +31,7 @@
 
     <action-mappings>
     </action-mappings>
-    
+
 
 <!-- ===================================== Controller Configuration -->
 

@@ -32,7 +32,7 @@
                     	<img id="js_image" src="${imagePath}/images/common/no_image.png" width="300">
                     </#if>
                     <div>
-                    	<input type="file" id="fileSelector" multiple accept="image/*" />
+                    	<input type="file" id="fileSelector" accept="image/*" />
 						<ul id="fileContentList" style="list-style-type: none;"></ul>
                         <#--
                         <input type="file" id="files" name="image" enctype="multipart/form-data" />
