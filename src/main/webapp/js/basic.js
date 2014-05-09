@@ -18,6 +18,7 @@
                 // ファイルの読み込みに成功したら、その内容を<img id="js_targetImage">に反映
                 reader.addEventListener('load', function(e) {
                     $("#js_targetImage").attr('src', reader.result);
+                    $('#hdn_imamge').val(reader.result);
                 }, false);
 
                 // ファイルの内容をData URL形式で取得
