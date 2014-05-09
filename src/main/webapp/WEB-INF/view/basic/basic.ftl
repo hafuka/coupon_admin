@@ -27,19 +27,22 @@
                     <h3 class="registMenu">１.イメージ画像</h3>
                     <input type="hidden" id="hdn_imamge" name="hdn_imamge">
                     <#if dispImagePath!?has_content>
-                        <img id="js_image" src="${dispImagePath!?html}" width="300">
+                        <img id="js_targetImage" src="${dispImagePath!?html}" width="150">
                     <#else>
-                    	<img id="js_image" src="${imagePath}/images/common/no_image.png" width="300">
+                        <img id="js_targetImage" src="${imagePath}/images/common/no_image.png" width="150">
                     </#if>
                     <div>
-                    	<input type="file" id="fileSelector" accept="image/*" />
-						<ul id="fileContentList" style="list-style-type: none;"></ul>
-                        <#--
-                        <input type="file" id="files" name="image" enctype="multipart/form-data" />
-                        <output id="list"></output>
-                        -->
+                        <input type="file" id="fileSelector" accept="image/*" />
                     </div>
-                    <p class="pv5">※[300px] x [300px] 以上の正方形画像で登録をおねがいします。</p>
+                    <p class="pv5">
+                        ※正方形画像で登録をおねがいします。<br>
+                        ※[300px] × [300px]程度の画像ですと高解像度のスマートフォンでもきれいに表示されます。<br>
+                        ※画像の登録に推奨するブラウザは下記になります。<br>
+                        ・Internet Explorer バージョン：10以上<br>
+                        ・Safari バージョン：6以上<br>
+                        ・Google Chrome バージョン：6以上<br>
+                        画像が登録されない場合は、上記のブラウザの最新版をダウンロードしてお試してください。
+                    </p>
                     <div>
                         <h3 class="registMenu inlineBlock">２.店舗名</h3>
                         <p class="pl10 fcOrange inlineBlock">※必須</p>
@@ -147,8 +150,9 @@
                                         ％
                                     </div>
                                 </div>
-                                <div class="cell vMiddle pr10" style="min-width:350px;">
-                                    <input type="text" id="srCouponDescription" name="srCouponDescription" placeholder="SRクーポンの説明・条件を入力してください" value="<#if srCoupon!?has_content>${srCoupon.description!?html}</#if>">
+                                <div class="pl10">
+                                    <p class="inlineBlock">※備考欄：</p>
+                                    <input class="inlineBlock" style="width:70%;" type="text" id="srCouponDescription" name="srCouponDescription" placeholder="SRクーポンの説明・条件を入力してください" value="<#if srCoupon!?has_content>${srCoupon.description!?html}</#if>">
                                 </div>
                             </li>
                             <li class="couponDetailList rCouponBg">
@@ -166,8 +170,9 @@
                                         ％
                                     </div>
                                 </div>
-                                <div class="cell vMiddle pr10" style="min-width:350px;">
-                                    <input type="text" id="rCouponDescription" name="rCouponDescription" placeholder="Rクーポンの説明・条件を入力してください" value="<#if rCoupon!?has_content>${rCoupon.description!?html}</#if>">
+                                <div class="pl10">
+                                    <p class="inlineBlock">※備考欄：</p>
+                                    <input class="inlineBlock" style="width:70%;" type="text" id="rCouponDescription" name="rCouponDescription" placeholder="Rクーポンの説明・条件を入力してください" value="<#if rCoupon!?has_content>${rCoupon.description!?html}</#if>">
                                 </div>
                             </li>
                             <li class="couponDetailList nCouponBg">
@@ -185,8 +190,9 @@
                                         ％
                                     </div>
                                 </div>
-                                <div class="cell vMiddle pr10" style="min-width:350px;">
-                                    <input type="text" id="nCouponDescription" name="nCouponDescription" placeholder="Nクーポンの説明・条件を入力してください" value="<#if nCoupon!?has_content>${nCoupon.description!?html}</#if>">
+                                <div class="pl10">
+                                    <p class="inlineBlock">※備考欄：</p>
+                                    <input class="inlineBlock" style="width:70%;" type="text" id="nCouponDescription" name="nCouponDescription" placeholder="Nクーポンの説明・条件を入力してください" value="<#if nCoupon!?has_content>${nCoupon.description!?html}</#if>">
                                 </div>
                             </li>
                         </ul>
@@ -197,11 +203,14 @@
                         <div>
                             ※<span class="fcRed">パーセンテージは合計で100%</span>になるように入力してください。<br>
                             ※SR(スーパーレア):一番良いクーポン、R(レア)：次に良いクーポン、N(ノーマル)：通常のクーポン　です。<br>
-                            ※クーポン情報を<span class="fcRed">汎用的なもの（条件のないもの）</span>にしてください。<br>
+                            ※クーポン情報を<span class="fcRed">汎用的なもの</span>にしてください。<br>
                             （登録できる例）<br>
                             　　「お会計から5%OFF!」「生ビール1杯無料!」など。<br>
                             （登録できない例）<br>
-                            　　「コース注文で5%OFF!」「3000円以上の購入でビール1杯無料!」など、<span class="fcRed">限定的な（条件のある）ものは登録できません。</span>
+                            　　「コース注文で5%OFF!」「3000円以上の購入でビール1杯無料!」など、<br>
+                            　　<span class="fcRed">限定的なものはなるべく避けていただけますようお願いいたします。</span><br>
+                            ※備考欄にはもし必要でありましたら個別に詳細などを記載ください。<br>
+                            　(例)「お1人様に1枚有効」「グループで1枚有効」など。
                         </div>
                     </div>
                 </form>
