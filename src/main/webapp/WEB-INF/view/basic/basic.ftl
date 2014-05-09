@@ -241,7 +241,6 @@
         <script src="/coupon_admin/js/angular.min.js"></script>
         <script src="/coupon_admin/js/ang_basic.js"></script>
         <script src="/coupon_admin/js/basic.js"></script>
-        <script src="/coupon_admin/js/utilities.js"></script>
         <script>
             //グローバルで使う変数を定義
             var urlPath = '${urlPath}';
