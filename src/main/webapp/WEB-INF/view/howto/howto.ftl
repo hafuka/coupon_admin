@@ -80,7 +80,7 @@
                 </div>
             </nav>
             
-            <h2 id="ac_serviceDetail" class="p10 fs20 textCenter bgWhite">店舗会員規約</h2>
+            <h2 id="ac_serviceTerms" class="p10 fs20 textCenter bgWhite">店舗会員規約</h2>
 
             <div class="m20 bgWhite p10">
                 <p class="p5">
