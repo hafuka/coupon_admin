@@ -203,12 +203,8 @@
                         <div>
                             ※<span class="fcRed">パーセンテージは合計で100%</span>になるように入力してください。<br>
                             ※SR(スーパーレア):一番良いクーポン、R(レア)：次に良いクーポン、N(ノーマル)：通常のクーポン　です。<br>
-                            ※クーポン情報を<span class="fcRed">汎用的なもの</span>にしてください。<br>
-                            （登録できる例）<br>
+                            （クーポン登録例）<br>
                             　　「お会計から5%OFF!」「生ビール1杯無料!」など。<br>
-                            （登録できない例）<br>
-                            　　「コース注文で5%OFF!」「3000円以上の購入でビール1杯無料!」など、<br>
-                            　　<span class="fcRed">限定的なものはなるべく避けていただけますようお願いいたします。</span><br>
                             ※備考欄にはもし必要でありましたら個別に詳細などを記載ください。<br>
                             　(例)「お1人様に1枚有効」「グループで1枚有効」など。
                         </div>
@@ -232,7 +228,7 @@
             </nav>
 
             <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
-                Copyright &copy; hubfactory
+                Copyright &copy; HUBFACTORY INC.
             </div>
         </section>
 

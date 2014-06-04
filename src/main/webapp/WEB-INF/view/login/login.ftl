@@ -50,7 +50,7 @@
         </nav>
         
         <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
-            Copyright &copy; hubfactory
+            Copyright &copy; HUBFACTORY INC.
         </div>
         
         <#-- 共通JavaScriptのインクルード -->

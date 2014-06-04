@@ -31,21 +31,24 @@
                     <a href="${urlPath!?html}/changePassword" class="link2">３.パスワード変更</a>
                 </div>
                 <div class="m10 fs22">
-                    <a href="${urlPath!?html}/howto" class="link2">４.クーポンをもっているお客さんへのご対応について</a>
+                    <a href="${urlPath!?html}/howto#ac_serviceDetail" class="link2">４.サービス詳細・サービスフローについて</a>
                 </div>
                 <div class="m10 fs22">
-                    <a href="${urlPath!?html}/howto#ac_storeDetail" class="link2">５.店舗詳細ページイメージ図</a>
+                    <a href="${urlPath!?html}/howto#ac_correspondence" class="link2">5.クーポンをもっているお客さんへのご対応について</a>
                 </div>
                 <div class="m10 fs22">
-                    <a href="${urlPath!?html}/howto#ac_storeOther" class="link2">6.その他、お問い合わせ先</a>
+                    <a href="${urlPath!?html}/howto#ac_storeDetail" class="link2">6.店舗詳細ページイメージ図</a>
                 </div>
                 <div class="m10 fs22">
                     <a href="http://coupon-island.com/coupon/static/?page=terms" class="link2" target="_blank">7.ご利用規約（サービス内）</a>
                 </div>
+                <div class="m10 fs22">
+                    <a href="${urlPath!?html}/howto#ac_serviceTerms" class="link2" target="_blank">8.7のご利用規約に準ずる店舗会員規約</a>
+                </div>
             </div>
 
             <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
-                Copyright &copy; hubfactory
+                Copyright &copy; HUBFACTORY INC.
             </div>
         </section>
 
