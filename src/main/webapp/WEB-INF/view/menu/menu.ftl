@@ -31,7 +31,7 @@
                     <a href="${urlPath!?html}/changePassword" class="link2">３.パスワード変更</a>
                 </div>
                 <div class="m10 fs22">
-                    <a href="${urlPath!?html}/howto#ac_serviceDetail" class="link2">４.サービス詳細・サービスフローについて</a>
+                    <a href="${urlPath!?html}/howto#ac_serviceDetail" class="link2">４.サービス詳細・サービスフローについて<span class="fcOrange">（重要）</span></a>
                 </div>
                 <div class="m10 fs22">
                     <a href="${urlPath!?html}/howto#ac_correspondence" class="link2">5.クーポンをもっているお客さんへのご対応について</a>
@@ -43,7 +43,7 @@
                     <a href="http://coupon-island.com/coupon/static/?page=terms" class="link2" target="_blank">7.ご利用規約（サービス内）</a>
                 </div>
                 <div class="m10 fs22">
-                    <a href="${urlPath!?html}/howto#ac_serviceTerms" class="link2" target="_blank">8.7のご利用規約に準ずる店舗会員規約</a>
+                    <a href="${urlPath!?html}/howto#ac_serviceTerms" class="link2">8.7のご利用規約に準ずる店舗会員規約</a>
                 </div>
             </div>
 
