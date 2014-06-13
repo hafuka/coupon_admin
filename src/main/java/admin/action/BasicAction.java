@@ -62,7 +62,7 @@ public class BasicAction extends BaseAction {
 
 	public Integer limitDays;
 
-	public Integer closeFlg;
+	public boolean closeFlg;
 
 	/** OUT項目 */
 	public MShop shop;
@@ -102,7 +102,7 @@ public class BasicAction extends BaseAction {
 			}
 		}
 
-		this.areaList = pullDownService.getAreaList();
+		this.areaList = pullDownService.getAllAreaList();
 		this.businessList = pullDownService.getBusinessList();
 
 		if (shop != null) {
@@ -151,7 +151,7 @@ public class BasicAction extends BaseAction {
 		mShop.areaDetailId = this.areaDetailId;
 		mShop.imgPath = imgPath;
 		mShop.couponLimitDays = this.limitDays;
-		mShop.closeFlg = this.closeFlg;
+		mShop.closeFlg = this.closeFlg ? 1 : 0;
 		shopService.registMShop(mShop);
 
 		// SRクーポン登録
