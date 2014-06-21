@@ -60,6 +60,10 @@ public class BasicAction extends BaseAction {
 	public Integer areaDetailId;
 	public Integer businessId;
 
+	public Integer limitDays;
+
+	public Integer closeFlg;
+
 	/** OUT項目 */
 	public MShop shop;
 	public MShopCoupon srCoupon;
@@ -146,6 +150,8 @@ public class BasicAction extends BaseAction {
 		mShop.areaId = this.areaId;
 		mShop.areaDetailId = this.areaDetailId;
 		mShop.imgPath = imgPath;
+		mShop.couponLimitDays = this.limitDays;
+		mShop.closeFlg = this.closeFlg;
 		shopService.registMShop(mShop);
 
 		// SRクーポン登録

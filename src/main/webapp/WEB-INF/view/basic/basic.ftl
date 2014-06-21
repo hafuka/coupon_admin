@@ -209,6 +209,21 @@
                             　(例)「お1人様に1枚有効」「グループで1枚有効」など。
                         </div>
                     </div>
+
+                    <div>
+                        <h3 class="registMenu inlineBlock">１２.クーポン有効期限</h3>
+                        <p class="pl10 fcOrange inlineBlock">※必須</p>
+                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" data-ng-show="frm.shopName.$error.required">★有効期限(日)を入力してください★</p>
+                        <p class="pl10 fcGreen inlineBlock">{{okMessageShopName}}</p>
+                        <input type="text" id="limitDays" name="limitDays" value="<#if shop!?has_content>${shop.couponLimitDays!?html}</#if>" data-ng-model="limitDays" required>
+                    </div>
+
+                    <div>
+                        <h3 class="registMenu inlineBlock">１３.閉店フラグ</h3>
+                        <p class="bgOrange fcWhite p5 mb5 fs14 inlineBlock" data-ng-show="frm.shopName.$error.required">★有効期限(日)を入力してください★</p>
+                        <p class="pl10 fcGreen inlineBlock">{{okMessageShopName}}</p>
+                        <input type="checkbox" id="closeFlg" name="closeFlg" <#if shop!?has_content && shop.closeFlg == 1>checked</#if>
+                    </div>
                 </form>
             </div>
 
