@@ -214,9 +214,9 @@
                         <h3 class="registMenu inlineBlock">１２.クーポン有効期限</h3>
                         <p>
                             <select name="limitDays">
-                            	<option value="7" <#if shop.couponLimitDays == 7 >selected</#if> >７日間</option>
-                            	<option value="14" <#if shop.couponLimitDays == 14 >selected</#if> >１４日間</option>
-                            	<option value="30" <#if shop.couponLimitDays == 30 >selected</#if> >３０日間</option>
+                            	<option value="7" <#if shop?has_content && shop.couponLimitDays == 7 >selected</#if> >７日間</option>
+                            	<option value="14" <#if shop?has_content && shop.couponLimitDays == 14 >selected</#if> >１４日間</option>
+                            	<option value="30" <#if shop?has_content && shop.couponLimitDays == 30 >selected</#if> >３０日間</option>
                             </select>
                         </p>
                         <p>※初期設定は「7日間（1週間）」に設定されてます。</p>
