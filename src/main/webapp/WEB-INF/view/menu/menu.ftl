@@ -40,7 +40,7 @@
                     <a href="${urlPath!?html}/howto#ac_storeDetail" class="link2">6.店舗詳細ページイメージ図</a>
                 </div>
                 <div class="m10 fs22">
-                    <a href="http://coupon-island.com/coupon/static/?page=terms" class="link2" target="_blank">7.ご利用規約（サービス内）</a>
+                    <a href="https://coupon-island.com/coupon/static/?page=terms" class="link2" target="_blank">7.ご利用規約（サービス内）</a>
                 </div>
                 <div class="m10 fs22">
                     <a href="${urlPath!?html}/howto#ac_serviceTerms" class="link2">8.7のご利用規約に準ずる店舗会員規約</a>

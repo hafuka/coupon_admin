@@ -30,22 +30,22 @@
                             <a href="${urlPath}/register" class="btn btnPrimary jsTouchActive fs20" style="width: 180px; height: 60px; line-height: 45px;">新規店舗登録</a>
                         </div>
                     </div>
-                    
+
                     <div class="textCenter" style="margin-top: 30px;">
                         ※こちらの管理ツールでクーポンやお店紹介情報の<br>登録・更新ができます。<br>
                         ※PCで操作をお願いします。スマートフォンには対応しておりません。
                     </div>
                 </div>
             </nav>
-            
+
             <div class="m10 fs16 textCenter">
-                <a href="http://coupon-island.com/coupon/static/?page=terms" class="link2" target="_blank">ご利用規約</a>
+                <a href="https://coupon-island.com/coupon/static/?page=terms" class="link2" target="_blank">ご利用規約</a>
             </div>
-            
+
             <div class="textCenter" style="padding: 20px 0; background-color: #fbe796;">
                 Copyright &copy; hubfactory
             </div>
-        
+
         </section>
 
         <#-- 共通JavaScriptのインクルード -->

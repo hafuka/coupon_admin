@@ -15,6 +15,6 @@ coupon-island@hubfactory.jp までご連絡ください。
 【${data.loginPassword}】
 
 COUPON-ISLAND管理者ページ
-http://coupon-island.com/coupon_admin/
+https://coupon-island.com/coupon_admin/
 
 
